@@ -2145,7 +2145,7 @@
 
         .people-mobile-overlap {
             display: block;
-            c/olor: white;
+            color: white;
             width: 90%;
             font-size: 14px;
             line-height: 18px;
@@ -2527,7 +2527,7 @@
         }
 
         .philosophy-content-text {
-            ont-size: 14px;
+            font-size: 14px;
             text-align: center;
             width: 95%;
             line-height: 16px;
@@ -2819,7 +2819,7 @@
             font-weight: bold;
             border-style: solid;
             border-width: 2px;
-            border-color: #55555;
+            border-color: #555555;
             width: 128px;
             height: 40px;
             display: block;
@@ -2846,7 +2846,7 @@
             font-weight: bold;
             border-style: solid;
             border-width: 2px;
-            border-color: #55555;
+            border-color: #555555;
             width: 178px;
             height: 40px;
             display: block;
