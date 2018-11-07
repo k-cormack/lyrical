@@ -1381,7 +1381,7 @@
         font-weight: bold;
         border-style: solid;
         border-width: 3px;
-        border-color: #55555;
+        border-color: #555555;
         width: 228px;
         height: 50px;
         display: block;
@@ -2063,7 +2063,7 @@
             font-weight: bold;
             border-style: solid;
             border-width: 2px;
-            border-color: #55555;
+            border-color: #555555;
             width: 128px;
             height: 40px;
             display: block;
@@ -2090,7 +2090,7 @@
             font-weight: bold;
             border-style: solid;
             border-width: 2px;
-            border-color: #55555;
+            border-color: #555555;
             width: 178px;
             height: 40px;
             display: block;
