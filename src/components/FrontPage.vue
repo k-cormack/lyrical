@@ -24,10 +24,17 @@
                                 id="logo" /></a>
                     </div>
                     <div id="navigation_right">
-                        <a href="philosophy" class="nav-item">PHILOSOPHY & DISCIPLINE</a><br />
-                        <a href="investment-options" class="nav-item">INVESTMENT OPTIONS</a><br />
-                        <a href="people" class="nav-item">PEOPLE</a><br />
-                        <a href="letters" class="nav-item">LETTERS & NEWS</a><br />
+                        <!-- <a href="philosophy" class="nav-item">PHILOSOPHY & DISCIPLINE</a><br /> -->
+                        <div class="nav-item" onclick="document.querySelector('#philosophy').scrollIntoView({behavior: 'smooth'})">PHILOSOPHY
+                            & DISCIPLINE</div>
+                        <!-- <a href="investment-options" class="nav-item">INVESTMENT OPTIONS</a><br /> -->
+                        <div class="nav-item" onclick="document.querySelector('#investment-scroll-point').scrollIntoView({behavior: 'smooth'})">INVESTMENT
+                            OPTIONS</div>
+                        <!-- <a href="people" class="nav-item">PEOPLE</a><br /> -->
+                        <div class="nav-item" onclick="document.querySelector('#people_photos').scrollIntoView({behavior: 'smooth'})">PEOPLE</div>
+                        <!-- <a href="letters" class="nav-item">LETTERS & NEWS</a><br /> -->
+                        <div class="nav-item" onclick="document.querySelector('#news').scrollIntoView({behavior: 'smooth'})">LETTERS
+                            & NEWS</div>
                         <a href="contact" class="nav-item">CONTACT</a><br />
                         <a href="http://espanol.lyricalam.com/" class="nav-item">ESPAÑOL</a><br />
                         <!--<a href="#" class="nav-item">CLIENT LOGIN</a>-->
@@ -76,13 +83,11 @@
                     <div class="investment-content" id="investment_content"><img src="https://www.lyricalam.com/images/investment_options.png"
                             style="padding-bottom:2%; min-width:300px;" width="45%" /><br />
                         <div class="investment-content-text">Lyrical offers multiple vehicles by which investors can
-                            invest. We
-                            manage both long only and hedged 1940 Act Mutual Funds, separately managed accounts, and
-                            UCITs
-                            funds. Each of these vehicles invests in liquid securities, is transparent to investors,
-                            and
-                            seeks
-                            to be tax efficient.
+                            invest. We manage both long only and hedged 1940 Act Mutual Funds, separately managed
+                            accounts, and
+                            UCITs funds. Each of these vehicles invests in liquid securities, is transparent to
+                            investors,<span id="investment-scroll-point"></span>
+                            and seeks to be tax efficient.
                         </div>
                         <!--content-text-->
                         <div class="investment-button">
@@ -126,11 +131,11 @@
             <img src="https://www.lyricalam.com/images/people.png" style="padding-top:2%; padding-bottom:2%; min-width:300px;"
                 width="40%" /><br />
             <div class="people-content"> A twenty-five year friendship served as the original foundation for the
-                establishment of Lyrical Asset Management. Now and prospectively, our people, their character and their
-                judgment, naturally undergird both our investment program and our investor relations. We hope, for the
+                establishment of Lyrical Asset Management. Now and prospectively, our people, their character, and
+                their
+                judgment naturally undergird both our investment program and our investor relations. We hope, for the
                 upcoming twenty-five years and beyond, that our investors are as proud of and confident in our team as
-                we
-                are.
+                we are.
             </div>
             <!--people-content-->
 
@@ -149,10 +154,8 @@
                                 MANAGING PARTNER, CIO</em></span>
                     </a>
                 </div>
-
-
-
             </div>
+            
             <!--people_photos-->
 
             <div id="people_photos_tablet">
@@ -415,8 +418,6 @@
 </script>
 
 <style>
-    @charset "UTF-8";
-
     * {
         margin: 0;
         padding: 0;
@@ -431,6 +432,10 @@
         padding: 0;
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .nav-item:hover {
+        cursor: pointer;
     }
 
 
@@ -1304,7 +1309,7 @@
 
     .letter-content div.body p {
         /* width: */
-        padding-top:20px;
+        padding-top: 20px;
         padding-bottom: 20px;
         font-size: 16px;
         font-weight: lighter;
@@ -2019,7 +2024,7 @@
 
         .letter-content div.body p {
             /* width:  */
-            padding-top:10px;
+            padding-top: 10px;
             padding-bottom: 10px;
             font-size: 12px;
             font-weight: lighter;
@@ -2775,7 +2780,7 @@
 
         .letter-content div.body p {
             /* width:  */
-            padding-top:10px;
+            padding-top: 10px;
             padding-bottom: 10px;
             font-size: 12px;
             font-weight: lighter;
@@ -3356,7 +3361,7 @@
         }
 
         .investment-button a:hover {
-            color:#c8e0e8 !important;
+            color: #c8e0e8 !important;
         }
 
         /*HOME PAGE - PEOPLE*/
