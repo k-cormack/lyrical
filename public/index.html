@@ -1,14 +1,440 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=11">
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<html lang="en-US" class=" js video">
 
-  <title>Welcome to Lyrical Asset Management</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lyrical Asset Management</title>
+
+    <!-- <link rel="profile" href="https://gmpg.org/xfn/11"> -->
+
+    <!-- <link rel="pingback" href="https://www.lyricalam.com/xmlrpc.php"> -->
+    <link rel="stylesheet" href="../src/css/style.css" type="text/css"
+        media="all">
+
+    <!-- <script async="" src="//www.google-analytics.com/analytics.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../src/js/utilities.js"></script>
+    <!--contains scripts used by multiple pages-->
+    <script src="../src/js/modernizer.custom.js"></script>
+    <!--Modernizr - to check compatibility-->
+    <script type="text/javascript">
+        var $p = jQuery.noConflict();
+        var waitTime = 1000; // Too short will not work.
+
+        $p(document).ready(function () {
+            if (Modernizr.video) {
+                // let's play some video! but what kind?
+                if (Modernizr.video.webm) {
+                    // try WebM		
+                } else if (Modernizr.video.h264) {
+                    // try H.264 video + AAC audio in an MP4 container		
+                } else {
+                    $p('#video').css("display", "none");
+                    $p('#homepage_hero_tablet').css("display", "block");
+                }
+            } else {
+                $p('#video').css("display", "none");
+                $p('#homepage_hero_tablet').css("display", "block");
+            }
+        });
+
+        var $e = jQuery.noConflict();
+        $e(function () {
+            $e("#here a").hover(
+                function () {
+
+                    $e(this).css("color", "white");
+
+
+                },
+                function () {
+                    $e(this).css("color", "#555555");
+                });
+            $e('#updates').click(function () {
+
+                window.location = 'https://www.lyricalam.com&type=updates';
+
+            });
+
+            $e('#letters2').click(function () {
+
+                window.location = 'https://www.lyricalam.com/letters#letters';
+
+            });
+            $e('#media').click(function () {
+
+                window.location = 'https://www.lyricalam.com/letters#news';
+
+            });
+        });
+    </script>
+
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-50459939-1', 'lyricalam.com');
+        ga('send', 'pageview');
+    </script>
 </head>
-<body>
-  
+
+<body data-rsssl="1">
+    <div id="main_container">
+        <div class="hero">
+            <div class="player-overlay">
+                <video autoplay="" muted="" loop="" style="width:100%;" id="video">
+                    <source src="//www.lyricalam.com/videos/Lyrical414.webmhd.webm" type="video/webm">
+                    <source src="//www.lyricalam.com/videos/Lyrical414b.mp4" type="video/mp4">
+                    <!--<source src="videos/Lyrical311.ogv" type="video/ogg"/>-->
+
+                </video>
+                <img src="../src/assets/homepage_hero.jpg" id="homepage_hero_tablet" width="100%">
+                <img src="../src/assets/homepage-mobile-hero.jpg" id="homepage_mobile_hero"
+                    width="100%">
+            </div>
+            <!--player-overlay-->
+            <div class="overlap">
+                <img src="../src/assets/back_to_basics.png" width="60%">
+            </div>
+            <!--overlap-->
+            <div id="navigation">
+                <div id="navigation_left">
+                    <a href="#"><img src="../src/assets/lyrical_logo_white.png" id="logo"></a>
+                </div>
+                <div id="navigation_right" style="display: none;">
+                    <a href="philosophy" class="nav-item" style="color: white;">PHILOSOPHY &amp; DISCIPLINE</a><br>
+                    <a href="investment-options" class="nav-item" style="color: white;">INVESTMENT OPTIONS</a><br>
+                    <a href="people" class="nav-item" style="color: white;">PEOPLE</a><br>
+                    <a href="letters" class="nav-item" style="color: white;">LETTERS &amp; NEWS</a><br>
+                    <a href="contact" class="nav-item" style="color: white;">CONTACT</a><br>
+                    <a href="http://espanol.lyricalam.com/" class="nav-item" style="color: white;">ESPAÑOL</a><br>
+                    <!--<a href="#" class="nav-item">CLIENT LOGIN</a>-->
+
+                </div>
+            </div>
+
+            <span id="hamburger_nav" style="display: inline; right: 0px;"><img
+                    src="../src/assets/hamburger_nav.png" width="100%"></span>
+
+        </div>
+        <!--hero-->
+        <div id="content" class="site-content">
+            <div class="white-notch"><img src="../src/assets/white_top_notch.png" width="100%"></div>
+
+            <div id="philosophy">
+                <img src="../src/assets/philosophy-dark.png"
+                    style="padding-bottom:2%; min-width:300px;" width="50%"><br>
+                <div class="philosophy-content">
+                    <div class="philosophy-content-text">At Lyrical Asset Management, we are fundamental value
+                        investors. The combination of value investing with quality and analyzability distinguishes the
+                        Lyrical investment program. We believe our hallmarks - value, quality, and analyzability -
+                        create a resiliency in our portfolios. Our sole aim in crafting our investment program is to
+                        maximize long-term investment returns. Lyrical employs a repeatable process to identify
+                        undervalued securities. We believe we have engineered our investment program to create the
+                        greatest likelihood of success.</div>
+                    <div class="philosophy-button"
+                        style="display:block; margin-left:auto; margin-right:auto; text-align:center;"><a
+                            href="?page_id=15"></a>
+                        <div class="button-text"><a href="?page_id=15">LEARN MORE</a></div>
+                    </div>
+
+                </div>
+                <!--philosophy-content-->
+
+            </div>
+            <!--philosophy-->
+            <div class="clear">
+                <div id="investment">
+                    <div class="investment-content" id="investment_content"><img
+                            src="../src/assets/investment_options.png"
+                            style="padding-bottom:2%; min-width:300px;" width="45%"><br>
+                        <div class="investment-content-text">Lyrical offers multiple vehicles by which investors can
+                            invest. We manage both long only and hedged 1940 Act Mutual Funds, separately managed
+                            accounts, and UCITs funds. Each of these vehicles invests in liquid securities, is
+                            transparent to investors, and seeks to be tax efficient.</div>
+                        <!--content-text-->
+                        <div class="investment-button">
+                            <div class="button-text"><a href="https://www.lyricalam.com/investment-options">LEARN
+                                    MORE</a></div>
+                        </div>
+                    </div>
+                    <!--investment-content-->
+                    <img src="../src/assets/investment_background.png" id="investment_home"
+                        style="z-index:0; min-height:400px;" width="100%">
+
+
+                    <div class="lightblue-notch"><img src="../src/assets/lightblue_top_notch.png"
+                            width="100%"></div>
+                </div>
+                <!--investment-->
+
+                <div id="investment_mobile">
+                    <div class="investment-content" id="investment_content"><img
+                            src="../src/assets/investment_options.png"
+                            style="padding-bottom:2%; min-width:300px;" width="45%"><br>
+                        <div class="investment-content-text">Lyrical offers multiple vehicles by which investors can
+                            invest. We manage both long only and hedged 1940 Act Mutual Funds, separately managed
+                            accounts, and UCITs funds. Each of these vehicles invests in liquid securities, is
+                            transparent to investors, and seeks to be tax efficient.</div>
+                        <!--content-text-->
+                        <div class="investment-button">
+                            <div class="button-text"><a href="?page_id=13">LEARN MORE</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--investment-->
+
+            <div id="people">
+                <img src="../src/assets/people.png"
+                    style="padding-top:2%; padding-bottom:2%; min-width:300px;" width="40%"><br>
+                <div class="people-content"> A twenty-five year friendship served as the original foundation for the
+                    establishment of Lyrical Asset Management. Now and prospectively, our people, their character and
+                    their judgment, naturally undergird both our investment program and our investor relations. We hope,
+                    for the upcoming twenty-five years and beyond, that our investors are as proud of and confident in
+                    our team as we are.</div>
+                <!--people-content-->
+
+                <div id="people_photos">
+                    <div id="people_left">
+                        <a href="?page_id=5&amp;type=jeffrey"><img src="../src/assets/jeffkeswin.png" id="jeff"
+                                style="cursor:pointer" width="90%"></a><br><br>
+                        <a href="?page_id=5&amp;type=jeffrey"><span style="text-align:center;"><span
+                                    style="font-weight:bold;"><strong>Jeffrey Keswin</strong></span><br><em>CO-FOUNDER,
+                                    MANAGING PARTNER, CEO</em></span></a>
+                    </div>
+                    <div id="people_right">
+                        <a href="?page_id=5&amp;type=andrew"><img src="../src/assets/andrewwellington.png" id="andrew"
+                                style="cursor:pointer" width="90%"></a><br><br>
+                        <a href="?page_id=5&amp;type=andrew"></a>
+                        <center><a href="?page_id=5&amp;type=andrew"><span style="text-align:center;"><span
+                                        style="font-weight:bold;"><strong>Andrew
+                                            Wellington</strong></span><br><em>CO-FOUNDER, MANAGING PARTNER,
+                                        CIO</em></span></a>
+                        </center>
+                    </div>
+
+
+
+                </div>
+                <!--people_photos-->
+
+                <div id="people_photos_tablet">
+                    <div id="people_left">
+                        <a href="?page_id=5#jeffrey"><img src="../src/assets/jeffkeswin.png"
+                                id="jeff" style="cursor:pointer" width="90%"></a><br><br>
+                        <a href="?page_id=5#jeffrey"><span style="text-align:center;"><span
+                                    style="font-weight:bold;"><strong>Jeffrey Keswin</strong></span><br><em>CO-FOUNDER,
+                                    MANAGING PARTNER, CEO</em></span></a>
+                    </div>
+                    <div id="people_right">
+                        <a href="?page_id=5#andrew"><img src="../src/assets/andrewwellington.png"
+                                id="andrew" style="cursor:pointer" width="90%"></a><br><br>
+                        <a href="?page_id=5#andrew"></a>
+                        <center><a href="?page_id=5#andrew"><span style="text-align:center;"><span
+                                        style="font-weight:bold;"><strong>Andrew
+                                            Wellington</strong></span><br><em>CO-FOUNDER, MANAGING PARTNER,
+                                        CIO</em></span></a>
+                        </center>
+                    </div>
+
+
+
+                </div>
+                <!--people_photos-->
+
+                <div id="people_photos_mobile">
+
+                    <a href="?page_id=5#jeffrey_mobile"><img src="../src/assets/jeffkeswin.png"
+                            id="jeff" style="cursor:pointer" width="90%"></a><br>
+                    <a href="?page_id=5#jeffrey_mobile"><span style="text-align:center;"><strong>Jeffrey
+                                Keswin</strong><br><em>CO-FOUNDER, MANAGING PARTNER, CEO</em></span></a><br><br>
+
+
+                    <a href="?page_id=5#andrew_mobile"><img src="../src/assets/andrewwellington.png"
+                            id="andrew" style="cursor:pointer" width="90%"></a><br>
+                    <a href="?page_id=5#andrew_mobile"></a>
+                    <center><a href="?page_id=5#andrew_mobile"><span style="text-align:center;"><strong>Andrew
+                                    Wellington</strong><br><em>CO-FOUNDER, MANAGING PARTNER, CIO</em></span></a><br><br>
+
+
+
+
+                    </center>
+                </div>
+                <!--people_photos_mobile-->
+
+                <div class="clear">
+                    <div class="notch" style="position:relative; bottom:-5px; width:100%;"><img
+                            src="../src/assets/gray_top_notch.png" width="100%"></div>
+                </div>
+                <!--people-->
+
+
+                <div id="news">
+                    <img src="../src/assets/letters-news-home.png"
+                        style="padding-top:2%; padding-bottom:2%; min-width:300px;" width="40%"><br>
+                    <div id="news_container">
+                        <div id="news_photos">
+                            <!-- <div class="news-image"id="news_left">          	
+                         <div class="hover" id="updates"><span class="news-hover-text"><a href="https://www.lyricalam.com1&type=updates"><strong>Updates</strong></a></span></div> 
+                            <a href="https://www.lyricalam.com1&type=updates"><img src="https://www.lyricalam.com/images/updates.png" width="100%"  /></a>
+                     </div>-->
+                            <center>
+                                <div class="news-image" id="news_left">
+                                    <div class="hover" id="letters2"><span class="news-hover-text"><a
+                                                href="https://www.lyricalam.com/letters#letters"><strong>Letters</strong></a></span>
+                                    </div>
+                                    <a href="https://www.lyricalam.com/letters#letters"><img
+                                            src="../src/assets/letters.jpg" width="100%"></a>
+
+                                </div>
+                                <div class="news-image" id="news_right">
+                                    <div class="hover" id="media"><span class="news-hover-text"><a
+                                                href="https://www.lyricalam.com/letters#news"><strong>News</strong></a></span>
+                                    </div>
+                                    <a href="https://www.lyricalam.com/letters#news"><img
+                                            src="../src/assets/media.png" width="100%"></a>
+
+                                </div>
+                            </center>
+                        </div>
+                        <!--news_photos-->
+                        <div id="news_photos_mobile">
+                            <div class="news-image">
+                                <div class="hover" id="letters2"><span class="news-hover-text"><a
+                                            href="https://www.lyricalam.com/letters#letters"><strong>Letters</strong></a></span>
+                                </div>
+                                <a href="https://www.lyricalam.com/letters#letters"><img
+                                        src="../src/assets/letters.jpg" width="100%"></a>
+
+                            </div>
+                            <div class="news-image">
+                                <div class="hover" id="media"><span class="news-hover-text"><a
+                                            href="https://www.lyricalam.com/letters#news"><strong>News</strong></a></span>
+                                </div>
+                                <a href="https://www.lyricalam.com/letters#news"><img
+                                        src="../src/assets/media.png" width="100%"></a>
+
+                            </div>
+
+
+
+                        </div>
+                        <!--news-photos_mobile-->
+                        <div class="clear">
+                        </div>
+                        <!--news_container-->
+
+                        <!-- <div class="notch" style="position:relative; bottom:-4px; width:100%;"><img src="https://www.lyricalam.com/images/bluegray_top_notch.png" width="100%" />-->
+                    </div>
+                    <!--news-->
+
+                    <!-- <div id="login" >
+                 <img src="https://www.lyricalam.com/images/client_login.png" style="padding-top:5%; padding-bottom:2%;" width="516px" /><br />
+               <input type="text" name="username" placeholder="LOGIN" style="width:370px; height:28px; border:none; font-size:16px; margin-bottom:30px; padding:10px; color:#555555; box-shadow: 2px 2px 1px gray;"  /><br />
+               <input type="password" name="password" placeholder="PASSWORD" style="width:370px; height:28px; border:none; outline:none; font-size:16px; margin-bottom:40px; padding:10px; color:#555555; box-shadow: 2px 2px 1px gray;" /><br />
+                <img src="https://www.lyricalam.com/images/lock.png" style="margin-bottom:30px;" /><br />
+                <div style="line-height:35px; margin-bottom:35px; letter-spacing:2px;"><strong><a href="#" style="text-decoration:none;">LOGIN</a></strong><br />
+                <span style="font-size:18px;"><em>Create an account <span id="here"><a href="#" style="text-decoration:underline;">here</a></span> </em></span>   </div>  
+           </div><!--login-->
+                    <div class="clear">
+
+                        <footer id="colophon" class="site-footer" role="contentinfo">
+                            <div id="footer_container">
+                                <div class="site-info">
+
+                                    <div id="footer-left">
+                                        <img src="../src/assets/lyrical_logo_solid.png" width="50%">
+
+
+                                    </div>
+
+                                    <div id="footer-right">
+                                        <div id="footer_contact"><a href="https://www.lyricalam.com/contact"
+                                                style="letter-spacing:3px;">CONTACT US</a></div>
+                                        <div id="footer_contact"><a href="https://www.lyricalam.com/Privacy-Policy.pdf"
+                                                target="_blank" style="letter-spacing:3px;">PRIVACY POLICY</a></div>
+                                        <div id="footer_copyright">
+                                            <div style="padding-bottom:3px;">Copyright © 2014</div> Lyrical Partners All
+                                            Rights Reserved
+                                        </div>
+
+                                    </div>
+
+
+                                </div><!-- .site-info -->
+                            </div><!-- #footer_container-->
+                        </footer>
+
+                    </div><!-- #page -->
+
+
+                </div>
+                <!--content-->
+            </div>
+            <!--main_container-->
+            <div id="popout_nav" style="text-align: right; font-style: normal; display: none; visibility: hidden;">
+
+                <div id="popout_nav_items" style="text-align:right; padding-right:20px; padding-bottom:20px;">
+                    <a href="https://www.lyricalam.com"><img
+                            src="../src/assets/lyrical_logo_solid.png" width="70%"
+                            style="padding-top:20px; padding-bottom:20px; border:none;"></a><br>
+
+                    <a href="https://www.lyricalam.com/philosophy" class="nav-item">PHILOSOPHY &amp; DISCIPLINE</a><br>
+                    <a href="https://www.lyricalam.com/investment-options" class="nav-item">INVESTMENT OPTIONS</a><br>
+                    <a href="https://www.lyricalam.com/people" class="nav-item">PEOPLE</a><br>
+                    <a href="https://www.lyricalam.com/letters" class="nav-item">LETTERS &amp; NEWS</a><br>
+                    <a href="https://www.lyricalam.com/contact" class="nav-item">CONTACT</a><br>
+                    <a href="http://espanol.lyricalam.com/" class="nav-item">ESPAÑOL</a>
+
+                    <br>
+                </div>
+
+                <!-- <a href="#">CLIENT LOGIN</a>-->
+            </div>
+
+            <div id="popout_nav_mobile"
+                style="text-align: right; font-style: normal; display: none; visibility: hidden;">
+
+                <div id="popout_nav_items" style="text-align:right; padding-right:20px; padding-bottom:20px;">
+                    <a href="https://www.lyricalam.com"><img
+                            src="../src/assets/lyrical_logo_solid.png" width="70%"
+                            style="padding-top:20px; padding-bottom:20px; border:none;"></a><br>
+
+                    <a href="https://www.lyricalam.com/philosophy" class="nav-item" style="color: white;">PHILOSOPHY
+                        &amp; DISCIPLINE</a><br>
+                    <a href="https://www.lyricalam.com/investment-options" class="nav-item"
+                        style="color: white;">INVESTMENT OPTIONS</a><br>
+                    <a href="https://www.lyricalam.com/people" class="nav-item" style="color: white;">PEOPLE</a><br>
+                    <a href="https://www.lyricalam.com/letters" class="nav-item" style="color: white;">LETTERS &amp;
+                        NEWS</a><br>
+                    <a href="https://www.lyricalam.com/contact" class="nav-item" style="color: white;">CONTACT</a><br>
+                    <a href="http://espanol.lyricalam.com/" class="nav-item" style="color: white;">ESPAÑOL</a>
+                </div>
+
+                <!-- <a href="#">CLIENT LOGIN</a>-->
+            </div>
+
+
+
+        </div>
+    </div>
 </body>
+
 </html>
